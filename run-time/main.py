@@ -1,21 +1,22 @@
 import time
+import math
 
-start_time = time.perf_counter()
+test_cases = [("√n", lambda n:math.sqrt(n)), ("n", lambda n: n)]
 
+for test_case in test_cases:
+    # 単位：秒
+    start_time = time.perf_counter()
 
-names = ["n"]
-functions = [lambda n: n]
+    # 処理件数
+    sum = 0
 
+    while True:
+        end_time = time.perf_counter()
+        erapsed_secs = end_time - start_time
+        # print(f"{erapsed_secs:.2f} secs")
+        if 1.0 <= erapsed_secs:
+            break
 
-n = 0
+        sum += 1
 
-while True:
-    if functions[0](n)/1_000_000 > 1:
-        break
-    n += 1
-
-end_time = time.perf_counter()
-
-# 経過時間(ナノ秒)
-erapsed = end_time - start_time
-print(f"{names[0]} : {erapsed} ns")
+    print(f"{erapsed_secs:.2f} secs : {test_case[0]:>2} : {sum} loops")
