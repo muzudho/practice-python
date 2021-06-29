@@ -1,27 +1,27 @@
 import time
 import math
 
-test_cases = [("log2", lambda n:math.log2(n)),
-              ("√n", lambda n:math.sqrt(n)), ("n", lambda n: n)]
+# log2 は 終わらない（＾～＾）
+# ("log2", lambda n:math.log2(n)),
+test_cases = [
+    ("√n", lambda n:math.sqrt(n)), ("n", lambda n: n)]
+
+# 制限時間（単位：秒）
+time_required_list = [1.0]
 
 for test_case in test_cases:
-    # 単位：秒
-    start_time = time.perf_counter()
+    for time_required in time_required_list:
+        # 処理件数
+        n = 1  # 0 開始は無理（＾～＾）
 
-    # 処理件数
-    sum = 0
+        # 制限時間（秒）
+        t = 1.0
 
-    # 制限時間（秒）
-    t = 1.0
+        while True:
+            if t < (test_case[1](n))/1_000_000:
+                break
 
-    while True:
-        end_time = time.perf_counter()
-        erapsed_secs = end_time - start_time
-        # print(f"{erapsed_secs:.2f} secs")
-        if t < erapsed_secs:
-            break
+            n += 1
 
-        sum += 1
-
-    print(
-        f"{erapsed_secs:.2f} 秒で 性能が {test_case[0]:>4} だと {sum-1}個 処理するので精一杯だぜ（＾ｑ＾）")
+        print(
+            f"{time_required} 秒で 1,000,000個処理できるマシンの性能が {test_case[0]:>4} になると {n-1}個 処理するので精一杯だぜ（＾ｑ＾）")
