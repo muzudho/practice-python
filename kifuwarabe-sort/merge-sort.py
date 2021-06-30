@@ -78,15 +78,27 @@ def merge_sort(all_cards, swap_space, leftmost_of_segment, rightmost_of_segment)
     merge(all_cards, swap_space, leftmost_of_segment, mid, rightmost_of_segment)
 
     # 途中結果（または最終結果）表示（＾～＾）
-    print_all_cards(all_cards)
+    print_all_cards(all_cards, leftmost_of_segment, mid, rightmost_of_segment)
 
 
-def print_all_cards(all_cards):
+def print_all_cards(all_cards, leftmost_of_segment, mid, rightmost_of_segment):
     """カードの表示"""
     leftmost = 0
     rightmost = len(all_cards)
     for i in range(leftmost, rightmost):
+        if i == leftmost_of_segment:
+            print(" [ ", end='')
+        elif i == mid:
+            print(" | ", end='')
+        elif i == rightmost_of_segment:
+            print(" ] ", end='')
         print(f"{all_cards[i]} ", end='')
+
+    if rightmost == mid:
+        print(" | ", end='')
+    if rightmost == rightmost_of_segment:
+        print(" ] ", end='')
+
     print("")  # New line
 
 
@@ -95,11 +107,12 @@ def main():
     swap_space = [' ', ' ', ' ', ' ', ' ', ' ',
                   ' ', ' ', ' ', ' ']  # とりあえず配列のサイズを確保しとく
 
-    # 初期配置表示（＾～＾）
-    print_all_cards(all_cards)
-
     leftmost = 0
     rightmost = len(all_cards)  # カードの総枚数（左端のカードの添え字はこの数を含まないので rightmost-1）
+
+    # 初期配置表示（＾～＾）
+    print_all_cards(all_cards, leftmost, rightmost, rightmost)
+
     merge_sort(all_cards, swap_space, leftmost, rightmost)
 
 
