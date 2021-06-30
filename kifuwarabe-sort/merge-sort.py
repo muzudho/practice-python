@@ -14,41 +14,40 @@ def merge(all_cards, swap_space, leftmost, mid, rightmost_end):
     rightmost_end : int
         右端。この数を含まない範囲で左から j が寄ってくる（＾～＾）
     """
-    i = leftmost
-    j = mid
+    l = leftmost  # 左側のスタートは左端
+    r = mid  # 右側のスタートは真ん中
 
     # スワップ・スペースの配列の添え字
-    k = 0
-    # l
+    s = 0
 
-    # i が 真ん中より下で、 j が　右端より左
-    while i < mid and j < rightmost_end:
-        # i側の方が小さい（か等しい）なら
-        if all_cards[i] <= all_cards[j]:
-            # i側の方をソート済みの方へ移す
-            swap_space[k] = all_cards[i]
-            i += 1
-            k += 1
+    # l が 真ん中より下で、 j が　右端より左
+    while l < mid and r < rightmost_end:
+        # 右側の方が小さい（か等しい）なら
+        if all_cards[l] <= all_cards[r]:
+            # 右側の方をスワップ・スペースの方へ移す
+            swap_space[s] = all_cards[l]
+            l += 1
+            s += 1
         else:
-            # j側の方をソート済みの方へ移す
-            swap_space[k] = all_cards[j]
-            j += 1
-            k += 1
+            # 左側の方をスワップ・スペースの方へ移す
+            swap_space[s] = all_cards[r]
+            r += 1
+            s += 1
 
-    if i == mid:  # i側のAをBに移動し尽くしたので、j側も順番にBに入れていく
-        while j < rightmost_end:
-            swap_space[k] = all_cards[j]
-            j += 1
-            k += 1
+    if l == mid:  # 左側をスワップ・スペースに移動し尽くしたので、右側も順番にスワップ・スペースに入れていく
+        while r < rightmost_end:
+            swap_space[s] = all_cards[r]
+            r += 1
+            s += 1
     else:
-        while i < mid:  # j側のAをBに移動し尽くしたので、i側も順番にBに入れていく
-            swap_space[k] = all_cards[i]
-            i += 1
-            k += 1
+        while l < mid:  # 右側をスワップ・スペースに移動し尽くしたので、左側も順番にスワップ・スペースに入れていく
+            swap_space[s] = all_cards[l]
+            l += 1
+            s += 1
 
-    # B の内容を A に戻す
-    for l in range(0, k):
-        all_cards[leftmost + l] = swap_space[l]
+    # スワップ・スペースの内容を all_cards に戻す
+    for s2 in range(0, s):
+        all_cards[leftmost + s2] = swap_space[s2]
 
 
 def merge_sort(all_cards, swap_space, leftmost_of_segment, rightmost_of_segment):
@@ -63,8 +62,9 @@ def merge_sort(all_cards, swap_space, leftmost_of_segment, rightmost_of_segment)
         区間の右端
     """
 
-    print(
-        f"leftmost={leftmost_of_segment} rightmost_of_segment={rightmost_of_segment}")
+    # 見ても分からん（＾～＾）
+    # print(
+    #    f"leftmost={leftmost_of_segment} rightmost_of_segment={rightmost_of_segment}")
 
     # `leftmost_of_segment == rightmost_of_segment` - １枚のカードを指してるようなら再帰を停止
     # `leftmost_of_segment == rightmost_of_segment - 1` - もカードを指してないようなら再帰を停止
