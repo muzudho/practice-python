@@ -62,10 +62,6 @@ def merge_sort(all_cards, swap_space, leftmost_of_segment, rightmost_of_segment)
         区間の右端
     """
 
-    # 見ても分からん（＾～＾）
-    # print(
-    #    f"leftmost={leftmost_of_segment} rightmost_of_segment={rightmost_of_segment}")
-
     # `leftmost_of_segment == rightmost_of_segment` - １枚のカードを指してるようなら再帰を停止
     # `leftmost_of_segment == rightmost_of_segment - 1` - もカードを指してないようなら再帰を停止
     if leftmost_of_segment == rightmost_of_segment or leftmost_of_segment == rightmost_of_segment - 1:  # Base case
@@ -81,20 +77,30 @@ def merge_sort(all_cards, swap_space, leftmost_of_segment, rightmost_of_segment)
     # マージする
     merge(all_cards, swap_space, leftmost_of_segment, mid, rightmost_of_segment)
 
+    # 途中結果（または最終結果）表示（＾～＾）
+    print_all_cards(all_cards)
+
+
+def print_all_cards(all_cards):
+    """カードの表示"""
+    leftmost = 0
+    rightmost = len(all_cards)
+    for i in range(leftmost, rightmost):
+        print(f"{all_cards[i]} ", end='')
+    print("")  # New line
+
 
 def main():
     all_cards = ['J', 'I', 'H', 'G', 'F', 'E', 'D', 'C', 'B', 'A']
     swap_space = [' ', ' ', ' ', ' ', ' ', ' ',
                   ' ', ' ', ' ', ' ']  # とりあえず配列のサイズを確保しとく
 
+    # 初期配置表示（＾～＾）
+    print_all_cards(all_cards)
+
     leftmost = 0
     rightmost = len(all_cards)  # カードの総枚数（左端のカードの添え字はこの数を含まないので rightmost-1）
     merge_sort(all_cards, swap_space, leftmost, rightmost)
-
-    # 表示（＾～＾）
-    for i in range(leftmost, rightmost):
-        print(f"{all_cards[i]} ", end='')
-    print("")  # New line
 
 
 main()
