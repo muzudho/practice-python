@@ -4,8 +4,9 @@ cards = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5, 8]
 subseq = []
 min_index = 0
 minimum = -1
+count = 1
 
-for j in range(0, 5):
+while True:
     pre_minimum = minimum
     minimum = 999
 
@@ -15,4 +16,9 @@ for j in range(0, 5):
             min_index = i
         pass
 
-    print(f"({j}周目) minimum={minimum} min_index={min_index}")
+    # 停止条件
+    if minimum == 999:
+        break
+
+    print(f"({count}周目) minimum={minimum} min_index={min_index}")
+    count += 1
