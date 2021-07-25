@@ -12,6 +12,12 @@ new_data = []
 for line in lines:
 
     if line.startswith('あ　') or line.startswith('ち　') or line.startswith('か　') or line.startswith('４　') or line.startswith('き　') or line.startswith('た　') or line.startswith('み　'):
+        # 句読点を除外
+        line = line.replace('、　', '　')
+        line = line.replace('。　', '　')
+        line = line.replace('、', '　')
+        line = line.replace('。', '　')
+
         buffer = ''
         tokens = line.split('　')
         for token in tokens:
@@ -20,14 +26,21 @@ for line in lines:
             elif len(buffer) + 1 + len(token) <= 52:
                 buffer += '　' + token
             else:
+                # 末尾に空白２つ追加
+                new_data.append(f'{buffer}  ')
                 # ２行目以降
-                new_data.append(buffer)
                 buffer = '　　' + token
 
         if buffer != '':
-            new_data.append(buffer)
-    else:
+            # 末尾に空白２つ追加
+            new_data.append(f'{buffer}  ')
+    elif line.startswith('# '):
+        new_data.append('')
         new_data.append(line)
+        new_data.append('')
+    else:
+        # 末尾に空白２つ追加
+        new_data.append(f'{line}  ')
 
 with open('object-2.txt', mode='w', encoding='utf-8') as f:
     f.write('\n'.join(new_data))
