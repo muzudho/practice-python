@@ -1,6 +1,7 @@
 """
 折り返しを除去します。
 """
+import re
 
 with open('object-1.txt', mode='r', encoding='utf-8') as f:
     data = f.read()
@@ -17,6 +18,9 @@ for line in lines:
         line = line.replace('。　', '　')
         line = line.replace('、', '　')
         line = line.replace('。', '　')
+
+        # 英単語（アスキーコード文字）に挟まれているところ以外で出てくる１つ分の半角スペースを、全角スペース１つに変換
+        line = re.sub(r'([^!-~\s]) ([^!-~\s])', r'\1　\2', line)
 
         buffer = ''
         tokens = line.split('　')
