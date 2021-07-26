@@ -21,6 +21,9 @@ for token in tokens:
             new_data.append(line)
         line = token
 
+if line != "":
+    new_data.append(line)
+
 with open('object-1.txt', mode='w', encoding='utf-8') as f:
     # f.write(data)
     f.write('\n'.join(new_data))
