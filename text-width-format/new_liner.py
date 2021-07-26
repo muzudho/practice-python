@@ -12,7 +12,7 @@ new_data = []
 
 for line in lines:
 
-    if line.startswith('あ　') or line.startswith('ち　') or line.startswith('か　') or line.startswith('４　') or line.startswith('き　') or line.startswith('た　') or line.startswith('み　'):
+    if line.startswith('あ　') or line.startswith('ち　') or line.startswith('か　') or line.startswith('４　') or line.startswith('き　') or line.startswith('た　') or line.startswith('み　') or re.match('\w+：　', line):
         # 句読点を除外
         line = line.replace('、　', '　')
         line = line.replace('。　', '　')
@@ -26,8 +26,11 @@ for line in lines:
         tokens = line.split('　')
         for token in tokens:
             if len(buffer) == 0:
-                buffer = token
-            elif len(buffer) + 1 + len(token) <= 52:
+                # 話者名を強調します Markdown書式
+                buffer = f'**{token}**'
+            elif len(buffer) + 1 + len(token) <= 54:
+                # 行頭に「**文**」の５文字が付いているが、これは１文字幅とカウントしたい（４つ多くカウントする）
+                # 全体として５０文字に収めたい
                 buffer += '　' + token
             else:
                 # 末尾に空白２つ追加
