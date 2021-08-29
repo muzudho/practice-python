@@ -51,3 +51,22 @@ for file in files:
     else:
         # Unmatched
         print(f"[ ] {file}")
+
+print("""
+Do you want to run it (y)?""")
+
+answer = input()
+
+if answer == "y":
+    for file in files:
+        basename = os.path.basename(file)
+        result = pattern.match(basename)
+        if result:
+            # Matched
+            converted = re.sub(patternText, replacement, basename)
+            oldPath = os.path.join(os.getcwd(), basename)
+            newPath = os.path.join(os.getcwd(), converted)
+            os.rename(oldPath, newPath)
+            print(f"Renamed {oldPath} --> {newPath}")
+else:
+    print("Canceld")
