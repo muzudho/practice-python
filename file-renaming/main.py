@@ -1,3 +1,4 @@
+import enum
 import os
 import glob
 import re
@@ -32,6 +33,8 @@ Are you sure this is the right directory (y/n)?""")
 
     if answer == "y":
         break
+    else:
+        print("Canceld")
 
 # 正規表現のパターンを入力してください
 while True:
@@ -57,7 +60,7 @@ Example: ^example-([\d\w]+)-([\d\w]+).txt$""")
             print(buf)
         else:
             # Unmatched
-            print(f"[ ] {basename}")
+            print(f"( ) {basename}")
 
     print("""
 Was there a match (y/n)?""")
@@ -66,43 +69,47 @@ Was there a match (y/n)?""")
 
     if answer == "y":
         break
+    else:
+        print("Canceld")
 
-print(r"""
+# 置換のシミュレーション
+while True:
+    print(r"""
 Enter the pattern after the conversion.
 Example: example-\2-\1.txt""")
-# \2pg\1
+    # \1pg\2
 
-replacement = input()
+    replacement = input()
 
-print("""
+    print("""
 Simulation
 ----------""")
-for file in files:
-    basename = os.path.basename(file)
-    result = pattern.match(basename)
-    if result:
-        # Matched
-        converted = re.sub(patternText, replacement, basename)
-        print(f"[x] {basename} --> {converted}")
-    else:
-        # Unmatched
-        print(f"[ ] {file}")
-
-print("""
-Do you want to run it (y/n)?""")
-
-answer = input()
-
-if answer == "y":
-    for file in files:
+    for i, file in enumerate(files):
         basename = os.path.basename(file)
         result = pattern.match(basename)
         if result:
             # Matched
             converted = re.sub(patternText, replacement, basename)
-            oldPath = os.path.join(os.getcwd(), basename)
-            newPath = os.path.join(os.getcwd(), converted)
-            os.rename(oldPath, newPath)
-            print(f"Renamed {oldPath} --> {newPath}")
-else:
-    print("Canceld")
+            print(f"({i+1}) {basename} --> {converted}")
+
+    print("""
+Do you want to run it (y/n)?""")
+
+    answer = input()
+
+    if answer == "y":
+        break
+    else:
+        print("Canceld")
+
+# 置換実行
+for i, file in enumerate(files):
+    basename = os.path.basename(file)
+    result = pattern.match(basename)
+    if result:
+        # Matched
+        converted = re.sub(patternText, replacement, basename)
+        oldPath = os.path.join(os.getcwd(), basename)
+        newPath = os.path.join(os.getcwd(), converted)
+        print(f"({i})Rename {oldPath} --> {newPath}")
+        os.rename(oldPath, newPath)
