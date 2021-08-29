@@ -5,3 +5,6 @@ object-2 copy.txt
 object-2 copy 2.txt
 object-2 copy 3.txt
 output.txt
+./output.txt
+
+# EOF
