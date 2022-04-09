@@ -5,5 +5,7 @@ TODO 指定したディレクトリーにあるファイル名を正規表現で
 ## Run
 
 ```shell
+cd file_renaming
+
 python main.py
 ```
