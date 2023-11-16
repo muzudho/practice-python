@@ -6,7 +6,8 @@ def calculate(jishogi_rate, sente_win_rate):
     sente_win_rate_on_normal_game = normal_game_rate * sente_win_rate
     gote_win_rate_on_normal_game = normal_game_rate - sente_win_rate_on_normal_game
 
-    sente_win_on_draw = (0.5 - normal_game_rate * sente_win_rate_on_normal_game) / jishogi_rate
+    #sente_win_on_draw = (0.5 - normal_game_rate * sente_win_rate_on_normal_game) / jishogi_rate
+    sente_win_on_draw = (0.5 - normal_game_rate * gote_win_rate_on_normal_game) / jishogi_rate
 
     # 0.5 = normal_game_rate * sente_win_rate_on_normal_game + jishogi_rate * sente_win_on_draw
     #   0 = (normal_game_rate * sente_win_rate_on_normal_game + jishogi_rate * sente_win_on_draw) - 0.5
@@ -16,7 +17,8 @@ def calculate(jishogi_rate, sente_win_rate):
     # sente_win_on_draw = (0.5 - normal_game_rate * sente_win_rate_on_normal_game) / jishogi_rate
 
     # 0.5 を目指す
-    half = normal_game_rate * sente_win_rate_on_normal_game + jishogi_rate * sente_win_on_draw
+    #half = normal_game_rate * sente_win_rate_on_normal_game + jishogi_rate * sente_win_on_draw
+    half = normal_game_rate * gote_win_rate_on_normal_game + jishogi_rate * sente_win_on_draw
 
     jishogi_percent = jishogi_rate * 100
     sente_win_percent = sente_win_rate * 100
@@ -35,10 +37,10 @@ def calculate(jishogi_rate, sente_win_rate):
 
 
 # ［将棋の真の引分けの数］が増えていくことをシミュレーションする（千日手、上限手数）
-for i_jishogi_rate in [2/3]: # [0.0, 0.25, 0.333, 0.5, 0.666, 0.75, 1.0]:
+for i_jishogi_rate in [1/4, 1/3, 1/2, 2/3, 3/4]:
 
     # ［将棋の真の先手勝率］の各ケースをシミュレーションする
-    for i_sente_win_rate in [0.7]: # [0.45, 0.5, 0.55, 0.6, 0.65, 0.7]:
+    for i_sente_win_rate in [0.45, 0.5, 0.55, 0.6, 0.65, 0.7]:
 
         calculate(
                 # 将棋の真の持将棋率
