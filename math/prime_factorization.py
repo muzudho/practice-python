@@ -64,4 +64,70 @@ def factorize(n):
                                     if r == 0:
                                         return [a, b, c, d]
 
+    for b in reversed(range(1,101)):
+
+        if (5 * b) < n:
+            p = n - 5 * b
+            print(f"(5x{b}) remain:{p}")
+
+            # 割り切れた
+            if p == 0:
+                return [a, b]
+
+            # 余った数で続きをやる
+
+            for c in reversed(range(1,101)):
+
+                if (3 * c) < p:
+                    q = p - 3 * c
+                    print(f"\t(3x{c}) remain:{q}")
+
+                    # 割り切れた
+                    if q == 0:
+                        return [a, b, c]
+
+                    # 余った数で続きをやる
+
+                    for d in reversed(range(1,101)):
+
+                        if (2 * d) < q:
+                            r = q - 2 * d
+                            print(f"\t\t(2x{d}) remain:{r}")
+
+                            # 割り切れた
+                            if r == 0:
+                                return [a, b, c, d]
+
+    for c in reversed(range(1,101)):
+
+        if (3 * c) < n:
+            q = n - 3 * c
+            print(f"(3x{c}) remain:{q}")
+
+            # 割り切れた
+            if q == 0:
+                return [a, b, c]
+
+            # 余った数で続きをやる
+
+            for d in reversed(range(1,101)):
+
+                if (2 * d) < q:
+                    r = q - 2 * d
+                    print(f"\t(2x{d}) remain:{r}")
+
+                    # 割り切れた
+                    if r == 0:
+                        return [a, b, c, d]
+
+    for d in reversed(range(1,101)):
+
+        if (2 * d) < n:
+            r = n - 2 * d
+            print(f"(2x{d}) remain:{r}")
+
+            # 割り切れた
+            if r == 0:
+                return [a, b, c, d]
+
 print(f"Anser:{factorize(n)}")
