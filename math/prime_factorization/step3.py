@@ -3,7 +3,8 @@
 # cd math/prime_factorization
 # python step3.py
 
-from step1 import factorize
+#from step1 import factorize
+from step1_1 import factorize
 
 n = 1
 
