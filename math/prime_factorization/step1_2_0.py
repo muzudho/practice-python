@@ -1,7 +1,7 @@
 # 素因数分解の練習
 #
 # cd math/prime_factorization
-# python step1.py
+# python step1_2_0.py
 
 import math
 
@@ -14,8 +14,9 @@ def factorize(n, debug=True):
     c_max = math.ceil(math.log(n, 3))+1
     d_max = math.ceil(math.log(n, 2))+1
 
+    aa = 7 ** a_max
     for a in reversed(range(0,a_max)):
-        aa = 7 ** a
+        aa /= 7
 
         # n 以下の小さな合成数 7a なら、とりあえず n から、それを引く
         if aa <= n:
@@ -30,11 +31,13 @@ def factorize(n, debug=True):
 
             # 余った数で続きをやる
 
+            bb = 5 ** b_max
             for b in reversed(range(0,b_max)):
-                bb = aa * 5 ** b
+                bb /= 5
+                aabb = aa * bb
 
-                if bb <= n:
-                    remain = n - bb
+                if aabb <= n:
+                    remain = n - aabb
 
                     if debug:
                         print(f"\t(7x{a} x 5x{b}) remain:{remain}")
@@ -45,11 +48,13 @@ def factorize(n, debug=True):
 
                     # 余った数で続きをやる
 
+                    cc = 3 ** c_max
                     for c in reversed(range(0,c_max)):
-                        cc = bb * 3 ** c
+                        cc /= 3
+                        aabbcc = aabb * cc
 
-                        if cc <= n:
-                            remain = n - cc
+                        if aabbcc <= n:
+                            remain = n - aabbcc
 
                             if debug:
                                 print(f"\t\t(7x{a} x 5x{b} x 3x{c}) remain:{remain}")
@@ -60,11 +65,13 @@ def factorize(n, debug=True):
 
                             # 余った数で続きをやる
 
+                            dd = 2 ** d_max
                             for d in reversed(range(0,d_max)):
-                                dd = cc * 2 ** d
+                                dd /= 2
+                                aabbccdd = aabbcc * dd
 
-                                if dd <= n:
-                                    remain = n - dd
+                                if aabbccdd <= n:
+                                    remain = n - aabbccdd
 
                                     if debug:
                                         print(f"\t\t\t(7x{a} x 5x{b} x 3x{c} x 2x{d}) remain:{remain}")

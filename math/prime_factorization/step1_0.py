@@ -1,7 +1,7 @@
 # 素因数分解の練習
 #
 # cd math/prime_factorization
-# python step1.py
+# python step1_0.py
 
 def factorize(n, debug=True):
 
