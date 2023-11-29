@@ -7,6 +7,7 @@ import math
 
 def factorize(n, debug=True):
 
+    # int( ... ) だと、取りこぼしてしまうようだ。 math.ceil( ... ) とした
     # + 1 が必要
     a_max = math.ceil(math.log(n, 7))+1
     b_max = math.ceil(math.log(n, 5))+1
