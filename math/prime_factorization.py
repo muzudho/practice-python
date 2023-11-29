@@ -15,19 +15,53 @@ n を　2, 3, 5, 7　の素数で素因数分解する。
 print("Please input number:")
 n = int(input())
 
-for a in reversed(range(1,101)):
+def factorize(n):
 
-    # n より小さな合成数 7a なら、とりあえず n から、それを引く
-    if (7 * a) < n:
-        o = n - 7 * a
-        print(f"(a {a}) remain:{o}")
+    for a in reversed(range(1,101)):
 
-        # 余った数で続きをやる
+        # n より小さな合成数 7a なら、とりあえず n から、それを引く
+        if (7 * a) < n:
+            o = n - 7 * a
+            print(f"(7x{a}) remain:{o}")
 
-        for b in reversed(range(1,101)):
+            # 割り切れた
+            if o == 0:
+                return [a]
 
-            if (5 * b) < o:
-                p = o - 5 * b
-                print(f"(b {b}) remain:{p}")
+            # 余った数で続きをやる
 
-print(f"Hello,! n:{n}")
+            for b in reversed(range(1,101)):
+
+                if (5 * b) < o:
+                    p = o - 5 * b
+                    print(f"\t(5x{b}) remain:{p}")
+
+                    # 割り切れた
+                    if p == 0:
+                        return [a, b]
+
+                    # 余った数で続きをやる
+
+                    for c in reversed(range(1,101)):
+
+                        if (3 * c) < p:
+                            q = p - 3 * c
+                            print(f"\t\t(3x{c}) remain:{q}")
+
+                            # 割り切れた
+                            if q == 0:
+                                return [a, b, c]
+
+                            # 余った数で続きをやる
+
+                            for d in reversed(range(1,101)):
+
+                                if (2 * d) < q:
+                                    r = q - 2 * d
+                                    print(f"\t\t\t(2x{d}) remain:{r}")
+
+                                    # 割り切れた
+                                    if r == 0:
+                                        return [a, b, c, d]
+
+print(f"Anser:{factorize(n)}")
