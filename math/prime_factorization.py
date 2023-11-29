@@ -18,126 +18,126 @@ n = int(input())
 def factorize(n):
 
     for a in reversed(range(1,101)):
-        aa = 7 * a
+        aa = 7 ** a
 
-        # n より小さな合成数 7a なら、とりあえず n から、それを引く
-        if aa < n:
-            o = n - aa
-            print(f"(7x{a}) remain:{o}")
+        # n 以下の小さな合成数 7a なら、とりあえず n から、それを引く
+        if aa <= n:
+            remain = n - aa
+            print(f"(7x{a}) remain:{remain}")
 
             # 割り切れた
-            if o == 0:
-                return [a]
+            if remain == 0:
+                return [a, 0, 0, 0]
 
             # 余った数で続きをやる
 
             for b in reversed(range(1,101)):
-                bb = aa * 5 * b
+                bb = aa * 5 ** b
 
-                if bb < o:
-                    p = o - bb
-                    print(f"\t(5x{b}) remain:{p}")
+                if bb <= n:
+                    remain = n - bb
+                    print(f"\t(7x{a} x 5x{b}) remain:{remain}")
 
                     # 割り切れた
-                    if p == 0:
-                        return [a, b]
+                    if remain == 0:
+                        return [a, b, 0, 0]
 
                     # 余った数で続きをやる
 
                     for c in reversed(range(1,101)):
-                        cc = bb * 3 * c
+                        cc = bb * 3 ** c
 
-                        if cc < p:
-                            q = p - cc
-                            print(f"\t\t(3x{c}) remain:{q}")
+                        if cc <= n:
+                            remain = n - cc
+                            print(f"\t\t(7x{a} x 5x{b} x 3x{c}) remain:{remain}")
 
                             # 割り切れた
-                            if q == 0:
-                                return [a, b, c]
+                            if remain == 0:
+                                return [a, b, c, 0]
 
                             # 余った数で続きをやる
 
                             for d in reversed(range(1,101)):
-                                dd = cc * 2 * d
+                                dd = cc * 2 ** d
 
-                                if dd < q:
-                                    r = q - dd
-                                    print(f"\t\t\t(2x{d}) remain:{r}")
+                                if dd <= n:
+                                    remain = n - dd
+                                    print(f"\t\t\t(7x{a} x 5x{b} x 3x{c} x 2x{d}) remain:{remain}")
 
                                     # 割り切れた
-                                    if r == 0:
+                                    if remain == 0:
                                         return [a, b, c, d]
 
     for b in reversed(range(1,101)):
-        bb = 5 * b
+        bb = 5 ** b
 
-        if bb < n:
-            p = n - bb
-            print(f"(5x{b}) remain:{p}")
+        if bb <= n:
+            remain = n - bb
+            print(f"(5x{b}) remain:{remain}")
 
             # 割り切れた
-            if p == 0:
-                return [a, b]
+            if remain == 0:
+                return [0, b, 0, 0]
 
             # 余った数で続きをやる
 
             for c in reversed(range(1,101)):
-                cc = bb * 3 * c
+                cc = bb * 3 ** c
 
-                if cc < p:
-                    q = p - cc
-                    print(f"\t(3x{c}) remain:{q}")
+                if cc <= n:
+                    remain = n - cc
+                    print(f"\t(5x{b} x 3x{c}) remain:{remain}")
 
                     # 割り切れた
-                    if q == 0:
-                        return [a, b, c]
+                    if remain == 0:
+                        return [0, b, c, 0]
 
                     # 余った数で続きをやる
 
                     for d in reversed(range(1,101)):
-                        dd = cc * 2 * d
+                        dd = cc * 2 ** d
 
-                        if dd < q:
-                            r = q - dd
-                            print(f"\t\t(2x{d}) remain:{r}")
+                        if dd <= n:
+                            remain = n - dd
+                            print(f"\t\t(5x{b} x 3x{c} x 2x{d}) remain:{remain}")
 
                             # 割り切れた
-                            if r == 0:
-                                return [a, b, c, d]
+                            if remain == 0:
+                                return [0, b, c, d]
 
     for c in reversed(range(1,101)):
-        cc = 3 * c
+        cc = 3 ** c
 
-        if cc < n:
-            q = n - cc
-            print(f"(3x{c}) remain:{q}")
+        if cc <= n:
+            remain = n - cc
+            print(f"(3x{c}) remain:{remain}")
 
             # 割り切れた
-            if q == 0:
-                return [a, b, c]
+            if remain == 0:
+                return [0, 0, c, 0]
 
             # 余った数で続きをやる
 
             for d in reversed(range(1,101)):
-                dd = cc * 2 * d
+                dd = cc * 2 ** d
 
-                if dd < q:
-                    r = q - 2 * d
-                    print(f"\t(2x{d}) remain:{r}")
+                if dd <= n:
+                    remain = n - dd
+                    print(f"\t(3x{c} x 2x{d}) remain:{remain}")
 
                     # 割り切れた
-                    if r == 0:
-                        return [a, b, c, d]
+                    if remain == 0:
+                        return [0, 0, c, d]
 
     for d in reversed(range(1,101)):
-        dd = 2 * d
+        dd = 2 ** d
 
-        if dd < n:
-            r = n - dd
-            print(f"(2x{d}) remain:{r}")
+        if dd <= n:
+            remain = n - dd
+            print(f"(2x{d}) remain:{remain}")
 
             # 割り切れた
-            if r == 0:
-                return [a, b, c, d]
+            if remain == 0:
+                return [0, 0, 0, d]
 
 print(f"Anser:{factorize(n)}")
