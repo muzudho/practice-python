@@ -21,14 +21,14 @@ def main():
     # 対局者の将棋の強さは同じとする
 
     # 将棋の先手勝率
-    sente_win_rate = 0.7
+    sente_win_rate = 0.68
 
     # 先手が勝った時の、先手がもらえる勝ち点
     sente_win_point = get_sente_win_point(sente_win_rate)
 
     # 先手の勝ちか？
     def is_sente_win():
-        return random.uniform(0, 1) < sente_win_point
+        return random.uniform(0, 1) < sente_win_rate
 
 
     # 数回対局
