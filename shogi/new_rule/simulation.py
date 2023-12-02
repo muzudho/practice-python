@@ -44,26 +44,32 @@ def main():
     #calc_sente_win_rate = sente_win_number / round_total
     #print(f"Calc sente win rate: {calc_sente_win_rate}")
 
+    def test_point():
 
-    # 勝ち点制
-    sente_win_point = get_sente_win_point(sente_win_rate)
-    gote_win_point = get_gote_win_point(sente_win_rate)
-    round_total = 100
-    sum_sente_win_point = 0
-    sum_gote_win_point = 0
-    for round in range(0, round_total):
-        is_sente_won = is_sente_win()
-        #print(f"round {round}. {is_sente_won}")
+        # 勝ち点制
+        sente_win_point = get_sente_win_point(sente_win_rate)
+        gote_win_point = get_gote_win_point(sente_win_rate)
+        round_total = 300
+        sum_sente_win_point = 0
+        sum_gote_win_point = 0
+        for round in range(0, round_total):
+            is_sente_won = is_sente_win()
+            #print(f"round {round}. {is_sente_won}")
 
-        if is_sente_won:
-            sum_sente_win_point += sente_win_point
-            sum_gote_win_point += gote_win_point
-        else:
-            sum_gote_win_point += 1
+            if is_sente_won:
+                sum_sente_win_point += sente_win_point
+                sum_gote_win_point += gote_win_point
+            else:
+                sum_gote_win_point += 1
 
-    # 実質的には 50:50 にはならないが、 53:47 ぐらいには収まってくれそう
-    print(f"Sum sente win point: {sum_sente_win_point}, gote: {sum_gote_win_point}")
+        # 実質的には 50:50 にはならないが、 53:47 ぐらいには収まってくれそう
+        #print(f"Sum sente win point: {sum_sente_win_point}, gote: {sum_gote_win_point}")
 
+        sum_total_win_point = sum_sente_win_point + sum_gote_win_point
+        print(f"Sum sente win point rate: {sum_sente_win_point/sum_total_win_point:7.3f}, gote: {sum_gote_win_point/sum_total_win_point:7.3f}")
+
+    for i in range(0,100):
+        test_point()
 
 if __name__ == "__main__":
     main()
