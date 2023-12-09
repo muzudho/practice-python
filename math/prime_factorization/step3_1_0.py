@@ -12,17 +12,21 @@ from step1_1_1_0 import factorize # これが高速
 print("Start")
 
 start = time.time()
-n = 1
 
-with open('data_time.txt', mode='w') as f_t:
-    with open('data.txt', mode='w') as f:
+#with open('data_time.txt', mode='w') as f_t:
+with open('data_time.txt', mode='a') as f_t:
+    #with open('data.txt', mode='w') as f:
+    with open('data.txt', mode='a') as f:
 
         f.write("""\
      i,          n,    7,    5,    3,    2
 ------, ----------, ----, ----, ----, ----
 """)
 
-        for i in range(0,1000001):
+        #n = 1
+        n = 53343361
+        #for i in range(0,1000001):
+        for i in range(3038,1000001):
             # 答えが出るまで繰り返す
             while True:
                 answer = factorize(n, debug=False)
