@@ -1,5 +1,5 @@
 # cd shogi/win_rate_epsilon
-# python win_point_version5.py
+# python abekobe_winning_point_rule.py
 
 
 def main():
