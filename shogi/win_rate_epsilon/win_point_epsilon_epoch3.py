@@ -1,5 +1,5 @@
-# cd shogi/black_win_rate_epsilon
-# python win_point_epsilon_detail.py
+# cd shogi/win_rate_epsilon
+# python win_point_epsilon_epoch3.py
 
 
 def main():
@@ -36,12 +36,13 @@ def main():
         # 先手の１敗の減点　＝　－（後手の１勝時の点の交通量 / 2）
         # 　　　　　　　　　　　または　- 1 - 後手の１敗の減点
         #
-        black_win_point_a = 1 / (2*black_win_rate)
-        white_win_point_a = 1 / (2*(1-black_win_rate))
-        all_win_point_a = black_win_point_a + white_win_point_a
+        black_win_point_a = 1 / (2*black_win_rate)          # 先手の１勝の値打ち
+        white_win_point_a = 1 / (2*(1-black_win_rate))      # 後手の１勝の値打ち
         #
+        all_win_point_a = black_win_point_a + white_win_point_a
         all_win_point_b = 2.0
         ratio = all_win_point_b / all_win_point_a
+        #
         black_win_moving_point = black_win_point_a * ratio   # 先手の１勝時の点の交通量
         white_win_moving_point = white_win_point_a * ratio   # 後手の１勝時の点の交通量
         black_win_point_b = black_win_moving_point / 2

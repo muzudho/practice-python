@@ -1,0 +1,69 @@
+# cd shogi/win_rate_epsilon
+# python win_point_epsilon_epoch4.py
+
+
+def main():
+    all_rounds = 100
+
+    # 全勝とか、全敗は避ける。0除算で計算できないから
+    for black_win_rounds in range(50,all_rounds):
+
+        white_win_rounds = all_rounds - black_win_rounds
+
+        # 先手勝率
+        black_win_rate = black_win_rounds / all_rounds
+
+        # ※ 以下、 0 除算しないために、先手勝率は 0 より大きく 1 より小さいものとする
+        #
+        #                           1
+        # 先手の１勝の値打ち　＝　-------------
+        #                       2 * 先手勝率
+        #
+        #                              1
+        # 後手の１勝の値打ち　＝　-------------------
+        #                       2 * (1 - 先手勝率)
+        #
+        # ※ 先手と後手の１勝時の点の交通量を合計すると 2 になるようにする
+        # 先手の１勝時の点の交通量　＝　先手の１勝の値打ち　×　(2 / （先手の１勝の値打ち ＋ 後手の１勝の値打ち）)
+        # 後手の１勝時の点の交通量　＝　2 - 先手の１勝時の点の交通量
+        #
+        # 先手の１勝の加点　＝　   先手の１勝時の点の交通量 / 2
+        # 後手の１敗の減点　＝　－（先手の１勝時の点の交通量 / 2）
+        #
+        # 後手の１勝の加点　＝　  1 - 先手の１勝の加点
+        # 先手の１敗の減点　＝　- 1 - 後手の１敗の減点
+        #
+        black_win_point_a = 1 / (2*black_win_rate)              # 先手の１勝の値打ち
+        white_win_point_a = 1 / (2*(1-black_win_rate))          # 後手の１勝の値打ち
+        #
+        all_win_point_a = black_win_point_a + white_win_point_a     # 両者の１勝の値打ちの合計
+        all_win_point_b = 2.0
+        ratio = all_win_point_b / all_win_point_a
+        #
+        black_win_moving_point = black_win_point_a * ratio      # 先手の１勝時の点の交通量
+        white_win_moving_point = 2 - black_win_moving_point     # 後手の１勝時の点の交通量
+        black_win_point_b = black_win_moving_point / 2
+        white_lose_point_b = - black_win_moving_point / 2
+        white_win_point_b = white_win_moving_point / 2
+        black_lose_point_b = - white_win_moving_point / 2
+
+        # 順当勝敗ケース
+        black_win_point_total = black_win_rounds * black_win_point_b + white_win_rounds * black_lose_point_b
+        white_win_point_total = white_win_rounds * white_win_point_b + black_win_rounds * white_lose_point_b
+        sum_win_point_total = black_win_point_total + white_win_point_total
+        # 後手の各々の点はまるでイプシロン（ε＝限りなくゼロに近い数）のようだ
+        print(f"""\
+先手勝率: {black_win_rate} のとき、
+    先手の１勝の値打ち　　　: {black_win_point_a:20.16f}
+    後手の１勝の値打ち　　　: {white_win_point_b:20.16f}
+    先手の１勝時の点の交通量: {black_win_moving_point:20.16f}
+    先手の１勝の加点　　　　: {black_win_point_b:20.16f} (後手は同じだけ減点する)
+    後手の１勝の加点　　　　: {white_win_point_b:20.16f} (先手は同じだけ減点する)
+    ここで、先手の {black_win_rounds} 勝 {white_win_rounds} 敗のケースの検算は以下の通り。
+        先手計:{black_win_point_total:20.16f}
+        後手計:{white_win_point_total:20.16f}
+        総　計:{sum_win_point_total:20.16f}
+""")
+
+if __name__ == "__main__":
+    main()
