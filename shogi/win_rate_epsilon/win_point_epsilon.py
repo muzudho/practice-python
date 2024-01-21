@@ -23,9 +23,14 @@ def main():
         # 後手の１勝の値打ち　＝　--------------------------
         #                       2 * (1 - black_win_rate)
         #
+        # 先手の１勝時に移動する点　＝　先手の１勝の値打ち　×　(2 / （先手の１勝の値打ち ＋ 後手の１勝の値打ち）)
+        #
         # ※ 先手と後手の合計が 2勝 になるように引き延ばす
-        # 先手の１勝の加点　＝　先手の１勝の値打ち　×　(2 / （先手の１勝の値打ち ＋ 先手の１勝の値打ち）)
-        # 後手の１勝の加点　＝　後手の１勝の値打ち　×　(2 / （後手の１勝の値打ち ＋ 後手の１勝の値打ち）)
+        # 先手の１勝の加点　＝　先手の１勝時に移動する点 / 2
+        # 後手の１敗の減点　＝　－（先手の１勝時に移動する点 / 2）
+        #
+        # 後手の１勝の加点　＝　後手の１勝の値打ち　×　(2 / （先手の１勝の値打ち ＋ 後手の１勝の値打ち）)
+        # 先手の１敗の減点　＝　0
         #
         black_win_point_a = 1 / (2*black_win_rate)
         white_win_point_a = 1 / (2*(1-black_win_rate))
@@ -33,18 +38,24 @@ def main():
         #
         all_win_point_b = 2.0
         ratio = all_win_point_b / all_win_point_a
-        black_win_point_b = black_win_point_a * ratio
+        black_win_moving_point = black_win_point_a * ratio   # 先手の１勝時に移動する点
+        black_win_point_b = black_win_moving_point / 2
+        white_lose_point_b = - black_win_moving_point / 2
         white_win_point_b = white_win_point_a * ratio
+        black_lose_point_b = 0
 
         # 順当勝敗ケース
-        black_win_point_total = black_win_rounds * black_win_point_b
-        white_win_point_total = white_win_rounds * white_win_point_b
+        black_win_point_total = black_win_rounds * black_win_point_b + white_win_rounds * black_lose_point_b
+        white_win_point_total = white_win_rounds * white_win_point_b + black_win_rounds * white_lose_point_b
         print(f"""\
 先手勝率: {black_win_rate} のとき、
-    先手の１勝の値打ち: {black_win_point_a:20.16f}
-    後手の１勝の値打ち: {white_win_point_b:20.16f}
-    先手の１勝の加点　: {black_win_point_b:20.16f}
-    後手の１勝の加点　: {white_win_point_b:20.16f}
+    先手の１勝の値打ち　　　: {black_win_point_a:20.16f}
+    後手の１勝の値打ち　　　: {white_win_point_b:20.16f}
+    先手の１勝時に移動する点: {black_win_moving_point:20.16f}
+    先手の１勝の加点　　　　: {black_win_point_b:20.16f}
+    後手の１敗の減点　　　　: {white_lose_point_b:20.16f}
+    後手の１勝の加点　　　　: {white_win_point_b:20.16f}
+    先手の１敗の減点　　　　: {black_lose_point_b:20.16f}
     にすれば、黒の {black_win_rounds} 勝 {white_win_rounds} 敗のケースでの合計点は、
         黒計:{black_win_point_total:20.16f}
         白計:{white_win_point_total:20.16f}
