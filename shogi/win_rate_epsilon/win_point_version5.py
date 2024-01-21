@@ -1,5 +1,5 @@
 # cd shogi/win_rate_epsilon
-# python win_point_epsilon_epoch5.py
+# python win_point_version5.py
 
 
 def main():
@@ -13,7 +13,7 @@ def main():
         # 先手勝率
         black_win_rate = black_win_rounds / all_rounds
 
-        # イプシロン勝ち点制
+        # 勝ち点変動制
         # =================
         #
         # 先手勝率を　x　とする。
@@ -31,7 +31,7 @@ def main():
         black_win_point_total = black_win_rounds * (1 - black_win_rate) - white_win_rounds * black_win_rate
         white_win_point_total = white_win_rounds * (black_win_rate) - black_win_rounds * (1 - black_win_rate)
         sum_win_point_total = black_win_point_total + white_win_point_total
-        # 後手の各々の点はまるでイプシロン（ε＝限りなくゼロに近い数）のようだ
+
         print(f"""\
 先手勝率: {black_win_rate} のとき、
 　　先手勝ちなら
