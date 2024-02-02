@@ -25,9 +25,9 @@ with open('data_time.txt', mode='a') as f_t:
 """)
 
         #n = 1
-        n = 369140625
+        n = 469762048
         #for i in range(0,1000001):
-        for i in range(4365,1000001):
+        for i in range(4552,1000001):
             # 答えが出るまで繰り返す
             while True:
                 answer = factorize(n, debug=False)
