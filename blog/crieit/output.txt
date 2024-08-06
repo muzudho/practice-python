@@ -1,0 +1,321 @@
+INSERT INTO `drafts` (`id`, `unique_id`, `user_id`, `post_id`, `name`, `tags`, `body`, `canonical_url`, `publish_status`, `for_sale`, `price`, `fixation_seq`, `is_open`, `access_count`, `last_access_ip`, `want_count`, `created_at`, `updated_at`) VALUES
+(19995, '61d5a8db1e587', 525, NULL, '円を考えようぜ（＾～＾）？', 'ぱぷー（＾～＾）',
+'![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　円のことを考えようぜ？」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　なんでなんだぜ？」  
+![ohkina-hiyoko-futsu2.png](https://crieit.now.sh/upload_images/96fb09724c3ce40ee0861a0fd1da563d61d5a92863706.png)  \n「　寝られないのよ」  
+![202201math1.png](https://crieit.now.sh/upload_images/435f5843413507238711caab06194f6661d5aa33e4f25.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　同じ形を　隣り合わせて　隙間なく詰めていけるような　図形を　**空間充填形** （くうかんじゅうてんけい）と呼ぶらしいぜ」  
+![202201math2.png](https://crieit.now.sh/upload_images/5d9b652d240ae69cb65e63b20a7c29c261d5ac34c5571.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　正方形の他に　正三角形と……」  
+![202201math3a2.png](https://crieit.now.sh/upload_images/e50dd77c27ce5bca858bc24d2da1830161d5b4844f7a0.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　正六角形があるそうだぜ」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　なんで　正五角形や　正七角形は　仲間に入れないんだぜ？」  
+![20220106math8.png](https://crieit.now.sh/upload_images/6dbc6752637c1e01f236feec986c55d961d5bd7c39a57.png)  \n![20220106math9.png](https://crieit.now.sh/upload_images/19cad0d2dc159d0064cb10ce797baf6b61d5be2dc958a.png)  \n![20220106math10.png](https://crieit.now.sh/upload_images/88b49cff7a5ba2b00a02e986db74e54661d5be85010ff.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　敷き詰まるかどうかは、角っこを隣り合わせて　ぴったり３６０°になることが　必要条件だぜ」  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　Wikipediaによると、正p角形が q枚 ひとつの頂点に集まるとき、  \n正p角形の内角　×　q　が 360°になる必要があって、  \n正3角形の内角は 60°で、6枚集まって 360°、\n正4角形の内角は 90°で、4枚集まって 360°、  \n正6角形の内角は 120°で、3枚集まって 360° ということだそうだぜ」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　正5角形の内角は　いくつだぜ？」  
+![20220106math11.png](https://crieit.now.sh/upload_images/aac60522e27cb0b090e80111c93d7a9061d5c1b883956.png)  
+![ohkina-hiyoko-futsu2.png](https://crieit.now.sh/upload_images/96fb09724c3ce40ee0861a0fd1da563d61d5a92863706.png)  \n「　360°を 5つに分ければ １つは 72°で、 三角形の内角の和が 180 だから　補角は 108° ね」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　360 ÷ 108 は 3.33333333.... だなあ。  \n小数点以下が 0 でないということは隙間ができるぜ」  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　ヒマな人が　正q角形で敷き詰められるのは　正3角形、正4角形、正6角形しかないことを証明したらしいぜ」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　その証明を　やってくれだぜ」  
+```\n内角 = (180 - (360 / p))\nq = 360 / 内角\n```
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　これでいいのかだぜ？ じゃあ内角を代入しようぜ」  
+```\nq = 360 / (180 - (360 / p))\n```
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　これを整理するか。\np が 1 のとき `360 / (180-(360/p))` は -2 で、  \np が 2 のとき `360 / (180-(360/p))` は 0除算で計算できないから、分母が `p-2` になるような分数臭いぜ」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　ロボットみたいな整理の仕方を始めたな」  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　p が 3 のとき `360 / (180-(360/p))` は 6 で、  \np が 4 のとき `360 / (180-(360/p))` は 4 で、  \np が 5 のとき `360 / (180-(360/p))` は  3.3333...で、  \np が 6 のとき `360 / (180-(360/p))` は 3 で」  
+![ohkina-hiyoko-futsu2.png](https://crieit.now.sh/upload_images/96fb09724c3ce40ee0861a0fd1da563d61d5a92863706.png)  \n「　減ってるわね」  
+```\nq = x / (p-2)\n```
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　?　早よ　x　を求めてくれだぜ」  
+```\n3 = x / (6-2)\n```
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　p が 6 のとき q は 3」  
+```\n 3 = x / (6-2)\n 3 = x /   4\n12 = x\n```
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　12 は p に入れた 6 の 2 倍」  
+```\n4 = x / (4-2)\n4 = x /   2\n8 = x\n```
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　p が 4 のとき q は 4。\n8 は p に入れた4の2倍」  
+```\nq = 2p / (p-2)\n```
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　じゃあ　これでいけるかだぜ？」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　1～6 までは　いけるな」  
+![ohkina-hiyoko-futsu2.png](https://crieit.now.sh/upload_images/96fb09724c3ce40ee0861a0fd1da563d61d5a92863706.png)  \n「　この式を見て　p は 3角形、4角形、6角形の３つしかないと言い切れるの？」  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　いや、分からん 。  \n右辺の分子は　0, 2, 4, 6, 8, 10, 12... みたいな増え方することは分かる」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　右辺の分母は　-2, -1, 0, 1, 2, 3, 4... みたいな増え方をするぜ」  
+![ohkina-hiyoko-futsu2.png](https://crieit.now.sh/upload_images/96fb09724c3ce40ee0861a0fd1da563d61d5a92863706.png)  \n「　公差が2の等差数列と、公差が1の等差数列ねぇ。  \n右辺の分母に -2 が利いていなければ `q = 2` の直線なのに」  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　さっぱり分からん。　証明するのを　終わり」  
+![ohkina-hiyoko-futsu2.png](https://crieit.now.sh/upload_images/96fb09724c3ce40ee0861a0fd1da563d61d5a92863706.png)  \n「　数学チャンネルによると、360 の約数を１つずつ調べると良いらしいわよ」  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　次に進もうぜ」  
+## 正方形
+![20220106math12.png](https://crieit.now.sh/upload_images/5027484686b4b28ca6acaa8cb7febb8e61d6f682b1284.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　１辺の長さが１の正方形の対角線の長さは　ルート２　で、  \nこれを求めるのが　ピタゴラスの定理だが　その説明は　今回は省くぜ」  
+![20220106math12a1.png](https://crieit.now.sh/upload_images/92a4c15665a3fa4243671a609531670d61d6f7c704d58.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　対角線の長さの方を１に固定したとき、辺の長さの方は　ルート２の半分だぜ。  \nこれは　分子と分母の両方を２乗した結果、 0.5 になる数だぜ」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　ピタゴラスの定理のせいで　平方根　よく出てくるよな」  
+![20220106math12a2.png](https://crieit.now.sh/upload_images/bf05441eb0ea1c738dc02e30463afa4861d7003edeb21.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　1 を ルート２ で割っても同じだぜ」  
+![ohkina-hiyoko-futsu2.png](https://crieit.now.sh/upload_images/96fb09724c3ce40ee0861a0fd1da563d61d5a92863706.png)  \n「　1 を２乗しても 1、 ルート２を２乗したら　２　ですからね」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　２乗したら 0.5 になる数とか　無限に有りそうだな」  
+## 三角形
+![20220106math13.png](https://crieit.now.sh/upload_images/e8453162217a6c373ac50d0d4770c5ba61d6fc62a5523.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　１辺の長さが２の正３角形は、頂点と中心を通る垂線の長さは　ルート３　だぜ」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　どうやって　ルート３　だと計ったんだぜ？」  
+![20220106math13a1.png](https://crieit.now.sh/upload_images/b81c62d578cb317dbb703437d64d165c61d6fd916701f.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　ピタゴラスの定理で出せるぜ」  
+![20220106math13a2.png](https://crieit.now.sh/upload_images/f1ce2136adc6d98c39286172adb3ede161d6ff0170377.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　１辺の方を１に固定すれば、垂線の長さは　ルート３の半分だぜ」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　半分になるんだな」  
+## まとめ
+![20220106math14.png](https://crieit.now.sh/upload_images/2929ee7b5f5b487a1e41d5c33970f69d61d7026b2e1c3.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　長さが 1 の棒を振り回しているとき、その角度が４５°持ち上がっているなら、  \n棒の先っぽの　垂直の高さも　水平の遠さも　**２乗したら 0.5 になる数**　と覚えておけだぜ」  
+![ohkina-hiyoko-futsu2.png](https://crieit.now.sh/upload_images/96fb09724c3ce40ee0861a0fd1da563d61d5a92863706.png)  \n「　嫌よ」  
+![20220106math15.png](https://crieit.now.sh/upload_images/66b79430a4940277a822087f5cab37b961d70400250b3.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　長さが 1 の棒を振り回しているとき、その角度が３０°持ち上がっているなら、  \n棒の先っぽの　垂直の高さは　**0.5**、　水平の遠さは　**２乗したら 3/4 になる数**　と覚えておけだぜ」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　なんで　そんなもん　覚えるんだぜ？」  
+![20220106math16a1.png](https://crieit.now.sh/upload_images/31240530a479685ed39efb72a2c9587a61d7059ceb77a.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　慣れてくると　円の内側に　正三角形が視えてくるぜ」  
+![ohkina-hiyoko-futsu2.png](https://crieit.now.sh/upload_images/96fb09724c3ce40ee0861a0fd1da563d61d5a92863706.png)  \n「　視えない　視えない～」  
+![20220106math16a2.png](https://crieit.now.sh/upload_images/138aaadf67fc006500d7d2d48081cc5161d7067caad55.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　正６角形も　視えてくる～」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　視えてもなあ」  
+![20220106math17.png](https://crieit.now.sh/upload_images/b1761a362301223664a0024ec1693fb261d70776c93ea.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　正６角形の１辺が　１　のとき、　２本の平行線の距離は　ルート３　だぜ。思い出せだぜ」  
+![ohkina-hiyoko-futsu2.png](https://crieit.now.sh/upload_images/96fb09724c3ce40ee0861a0fd1da563d61d5a92863706.png)  \n「　ありがたみが　分かんないのよね」  
+![20220106math17a1.png](https://crieit.now.sh/upload_images/2b4bf7c9b256505047d799e19c28c7ff61d7080ae9ede.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　もちろん　この　１間飛び（いっけんとび）の　２点間の距離も　ルート３　だな」  
+![20220106math17a2.png](https://crieit.now.sh/upload_images/b2e6a807d11fac13257c535cc9535aff61d708d50a371.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　こんなところにも　直角三角形が　できたぜ。　正三角形を思い出せだぜ」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　幾何学マンは　こんなことして　遊んでんのか……」  
+![20220106math18.png](https://crieit.now.sh/upload_images/27f4956138333362155812e7183339ee61d70abc1a06d.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　こんなふうに置いても　いいかんじだよな。　棒を　60°　持ち上げたら、  \nそこから　直角にレーザービームを出せば　ルート３　の長さで地面だぜ」  
+![ohkina-hiyoko-futsu2.png](https://crieit.now.sh/upload_images/96fb09724c3ce40ee0861a0fd1da563d61d5a92863706.png)  \n「　使うこと無さそう」  
+![20220107math19.png](https://crieit.now.sh/upload_images/288b9676246c4448c88dc5487a06a41161d70f8498e4b.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　じゃあ　上図の　紫色の　ｘ　の長さは　いくつだぜ？」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　ピタゴラスの定理を使えば、と思ったが　高さが　円の外に　ちょっと　はみ出ているから　高さが分からんな」  
+![ohkina-hiyoko-futsu2.png](https://crieit.now.sh/upload_images/96fb09724c3ce40ee0861a0fd1da563d61d5a92863706.png)  \n「　コタンジェントを使うと　１秒で答えが分かるんだけど、  \n**タンジェント、何の役に立つ** とか言う人がいるこの日本国で　さらにマイナーな『**コ**』タンジェントを使うのは　２倍　癪ねぇ」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　こんなところで　役に立たなくてもな」  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　ヒントとしては……」  
+![20220107math19a1.png](https://crieit.now.sh/upload_images/8429b978e503bc0cd5b8428ef0beab4061d71266bf5da.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　埋めれる角度は　埋めてしまえ　ということだぜ」  
+![ohkina-hiyoko-futsu2.png](https://crieit.now.sh/upload_images/96fb09724c3ce40ee0861a0fd1da563d61d5a92863706.png)  \n「　ああ、分かった！　**相似**（そうじ）図形よ」  
+![20220107math19a2.png](https://crieit.now.sh/upload_images/6ae357015dce515e6fad264af3ed37a961d713bccd0f1.png)
+![ohkina-hiyoko-futsu2.png](https://crieit.now.sh/upload_images/96fb09724c3ce40ee0861a0fd1da563d61d5a92863706.png)  \n「　?　小さな三角から見て　赤い線の長さ　１　は、　大きな三角から見て　緑色の線の　長さ　ルート３　に当たるから、\n小さな三角形は　ルート３　倍小さいのよ」  
+![20220107math20.png](https://crieit.now.sh/upload_images/f0c8917a96e17dc5688f8c4ecfe0002f61d716129610f.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　上図の小さな三角形の　赤い線のところの長さは　１／ルート３　と分かったんだな。  \n角度が　60°　のときは　ルート３　だったのに、  \n角度が　30°　になると　１／ルート３　になってしまうの、面白いよな」  
+![ohkina-hiyoko-futsu2.png](https://crieit.now.sh/upload_images/96fb09724c3ce40ee0861a0fd1da563d61d5a92863706.png)  \n「　面白いのかなあ？」  
+![20220107math21.png](https://crieit.now.sh/upload_images/84ec4f9275bf54e3577c74012cb182ee61d717aedfc60.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　ちなみに　45°　持ち上げたときは　緑の線の所は　赤い線の所と同じだぜ。正方形を思い出せだぜ」  
+![20220107math22.png](https://crieit.now.sh/upload_images/139b3bad9d6acba8b90320ef55cc710661d718f2885a8.png)  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　こんなんだったかな。　なんか　前と違うような」  
+![20220107math23.png](https://crieit.now.sh/upload_images/a169cc34610f3098108f1bc55253ff9361d719f87ea26.png)  
+![ohkina-hiyoko-futsu2.png](https://crieit.now.sh/upload_images/96fb09724c3ce40ee0861a0fd1da563d61d5a92863706.png)  \n「　前は　円に内接してたのよ」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　相似図形のときは　１　のところにある長さを見れば　倍率がすぐ分かるな」  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　よし、寝れそう」  
+# 次の日 復習
+![20220107math24a1.png](https://crieit.now.sh/upload_images/5283768775313f425dead09cc4e4ede061d81ed69c30d.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　じゃあ　上図の赤い線の長さが　１　のとき、　緑色の線の長さは　いくつ　だぜ？」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　2 だな」  
+![20220107math26.png](https://crieit.now.sh/upload_images/b28f0399921112f20ead57530458289261d8298f7a226.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　30°のときも　やったな」  
+![20220107math27.png](https://crieit.now.sh/upload_images/db49e459129db9161dc69c6e5b4efcab61d82a45da7ec.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　60°のときも　やったな」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　全パターン　覚えたと思う」  
+![ohkina-hiyoko-futsu2.png](https://crieit.now.sh/upload_images/96fb09724c3ce40ee0861a0fd1da563d61d5a92863706.png)  \n「　クイズを出してみましょう！」  
+# クイズ
+## 問１
+![20220107math28a1.png](https://crieit.now.sh/upload_images/a3da1ad7aaaad584907da13248e5021161d82c3edb618.png)  
+## 問２
+![20220107math29a1.png](https://crieit.now.sh/upload_images/62c57caf08e9d2edfb92c76754a6cc5061d82d07debfa.png)  
+## 問３
+![20220107math29a2.png](https://crieit.now.sh/upload_images/1510f2f34f284cf8485f65419059690f61d82da564ed4.png)  
+## 問４
+![20220107math29a3.png](https://crieit.now.sh/upload_images/3aed6b803a383bb9ee555f9c8e0556b761d82eb35e56c.png)  
+## 問５
+![20220107math29a4.png](https://crieit.now.sh/upload_images/e4fff14d473d38bc6b3c2838f44d7e5461d82f1b69a65.png)  
+## 問６
+![20220107math29a6.png](https://crieit.now.sh/upload_images/3705930ab40dfee9f69653c1f024b3d761d82f7c9de7a.png)  
+## 問７
+![20220107math29a7.png](https://crieit.now.sh/upload_images/a38bb6b2d094b2149ba8c6eeb90afcb761d8303b83e72.png)  
+## 問８
+![20220107math29a8.png](https://crieit.now.sh/upload_images/df5867c6599fbcc83385fd46092cbbf061d833cbdaebc.png)  
+## 問９
+![20220107math29a9.png](https://crieit.now.sh/upload_images/b2629f32baa9cb6afa2f3524bdd36b9161d83207092bd.png)  
+## 問１０
+![20220107math29a10.png](https://crieit.now.sh/upload_images/0d7aaeaac3479f8ff1188b8a1e26d4d561d8337a4c485.png)  
+## 問１１
+![20220107math29a11.png](https://crieit.now.sh/upload_images/a48932c56db66266e45f49b13353fbee61d83383b8350.png)  
+## 問１２
+![20220107math29a12.png](https://crieit.now.sh/upload_images/989963d2133598dd125dbf2154e0384661d833928cf44.png)  
+## 問１３
+![20220107math29a13.png](https://crieit.now.sh/upload_images/e3de730aa4bcf73720f1153a7ddf2e8c61d835ba47507.png)  
+## 問１４
+![20220107math29a14.png](https://crieit.now.sh/upload_images/43db1bc41592ac904ef5c358376a357d61d8361e8dd56.png)  
+## 問１５
+![20220107math29a15.png](https://crieit.now.sh/upload_images/8de748e0b26ebc15f3eb19e752222ee761d836c4bfd07.png)  
+## 問１６
+![20220107math29a16.png](https://crieit.now.sh/upload_images/61b87ea2f1e7617e5cac947db22e880661d8377af31d7.png)  
+## 問１７
+![20220107math29a17.png](https://crieit.now.sh/upload_images/0756e8c7513d650fb3cd10edb6a4cc8061d8380c1684b.png)  
+## 問１８
+![20220107math29a18.png](https://crieit.now.sh/upload_images/3473aaa5c7ed66a6ea8ecd0be9556a5461d8389101473.png)  
+# 線の名前
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　全部　分かったぜ」  
+![ohkina-hiyoko-futsu2.png](https://crieit.now.sh/upload_images/96fb09724c3ce40ee0861a0fd1da563d61d5a92863706.png)  \n「　問題ごとに　上図の　何色の線の長さは、とか　説明するの　かったるくない？」  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　じゃあ　線に何か　名前を付けるかだぜ？」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　線なんか　あっちゃこっちゃ　に有って　名前なんか付けようがないだろ」  
+## レイディアス（radius）
+![20220107math30.png](https://crieit.now.sh/upload_images/0fe21260c474b65f665a649e003cfac761d83aa9c961f.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　円の中心から、円まで最短で伸びてる線は　どこのことか分かるだろ。 こいつには　レイディアス　という名前があるぜ」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　語源は何なんだぜ？」  
+?　[radius (n.)](https://www.etymonline.com/word/radius)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　起源不明だぜ。 1610年頃の英語では　２本の骨の短い方、ぐらいの意味で使われているそうだぜ」  
+## タンジェント（Tangent）、サイン（Sine）、セカント（Secant）
+![20220107math31a2.png](https://crieit.now.sh/upload_images/b05312c1c5b5d47062286fbee60808a961d840955253f.png)  
+?　[三角法の歴史](http://asait.world.coocan.jp/kuiper_belt/mathematics/trigonometry.htm)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　どこで読んだか忘れてしまったが、\n円周の１点を通過する線を　タンジェント、  \n円周の２点をつなぐ線を　サイン、  \n円周の２点をつらぬく線を　セカント　と呼ぶそうだぜ」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　そんな名前で　線のパターンを網羅できるのかだぜ？」  
+![20220107math32.png](https://crieit.now.sh/upload_images/e6fe480f89be8bf23c53db705319803f61d8428842089.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　タンジェント　は　いけそうだろ」  
+![20220107math32a2.png](https://crieit.now.sh/upload_images/43cf4915e4f34a44d82609f9d997a8de61d842fd13f18.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　サイン　も　いけるだろ」  
+![20220107math32a3.png](https://crieit.now.sh/upload_images/131e4bd8e810edc1aac5127e6841425c61d84373411b3.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　セカント　も　いけてたな」  
+![20220107math32a4.png](https://crieit.now.sh/upload_images/9dc8998554f5994f2e29269c9947f32b61d843dfe5f09.png)  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　直角三角形の　各線を　おさえているな」  
+![20220107math32a5.png](https://crieit.now.sh/upload_images/d7fcc4af5dd7cfee6a50fec76a00969761d844480ba13.png)  
+![ohkina-hiyoko-futsu2.png](https://crieit.now.sh/upload_images/96fb09724c3ce40ee0861a0fd1da563d61d5a92863706.png)  \n「　?　でも　三角形は　反対側にも　あらない？」  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　じゃあ　`co-` （コ）　を付けようぜ？」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　コ？」  
+![20220107math32a6.png](https://crieit.now.sh/upload_images/39ac137201548efe31fb2b0170bd7cee61d8451d6fd76.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　コタンジェント」  
+![20220107math32a7.png](https://crieit.now.sh/upload_images/f950f50a7fb67ba204e1184d222bb59461d84f87afaa7.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　コサイン」  
+![20220107math32a8.png](https://crieit.now.sh/upload_images/7501b6093ee6f3ed1d34f3f18e4d0cfc61d8464203016.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　コセカント」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　わらう」  
+![ohkina-hiyoko-futsu2.png](https://crieit.now.sh/upload_images/96fb09724c3ce40ee0861a0fd1da563d61d5a92863706.png)  \n「　でも　コセカントは　サインの逆数だし、　セカントは　コサインの逆数だし、　覚えなくていいんじゃないの？  \n覚えるだけ無駄だからって、教科書から消えてるわよ」  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　覚えただけで無駄だから　社会から消えるのは　お前ら　だと言ってやってくれだぜ」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　逆数って　何のことだぜ？」  
+# 逆数（セカントとコサイン）
+![20220107math33.png](https://crieit.now.sh/upload_images/4fa191832d91b40d962f3311cde8ee6d61d84b4266f89.png)  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　?　セカントは　コサインの逆数なのかだぜ？」  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　計算してみろだぜ」  
+![20220107math33a1.png](https://crieit.now.sh/upload_images/b0425e8568e1f74fd03da00a5bb013fa61d84ccea9d60.png)  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　?　逆数だな。しかし　いったいなぜ？」  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　**セカントはコサインの逆数** という説明はネット上でいくらでも見かけるが、なぜそうなのかについての説明とか出てこないぜ」  
+![ohkina-hiyoko-futsu2.png](https://crieit.now.sh/upload_images/96fb09724c3ce40ee0861a0fd1da563d61d5a92863706.png)  \n「　そんなもんだから　というのが説明なんじゃないの？」  
+![20220107math33a2.png](https://crieit.now.sh/upload_images/5206d9837fa2a44da96f0b3a8b6cd8ec61d851af265c3.png)  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　?　相似の図形で　長さが　1　の辺に被ってるところは　大きさの比　になってるのは　前にやったが、  \nそいつのせいか？」  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　それはそうかもしれないが、なんで　そんな　おもしろ構造が　こんなとこにあるんだぜ？  \nまぐれで　ここに存在するのか、　なにか　必然的に存在するのか？」  
+![ohkina-hiyoko-futsu2.png](https://crieit.now.sh/upload_images/96fb09724c3ce40ee0861a0fd1da563d61d5a92863706.png)  \n「　知らんわよ」  
+![20220107math33a3.png](https://crieit.now.sh/upload_images/9b5745dd72cce8a2f5e95388121f1adf61d8549e127c1.png)  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　?　じゃあ　上図の　x　は？」  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　赤い線が短くなってるが、　相似図形だから　同じ比で　出せるんじゃないか？」  
+![ohkina-hiyoko-futsu2.png](https://crieit.now.sh/upload_images/96fb09724c3ce40ee0861a0fd1da563d61d5a92863706.png)  \n「　ルート３分の２　が、　２分のルート３　になるとき、比は　何なの？」  
+```plain\n比 = (sqrt(3)/2) / (2/sqrt(3))\n```
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　こんな式でいいの？」  
+![20220107math34.png](https://crieit.now.sh/upload_images/02d5ced68fafd40bce61c7985f884e8161d8567ea0de5.png)  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　?　えっ、　こう？」  
+![ohkina-hiyoko-futsu2.png](https://crieit.now.sh/upload_images/96fb09724c3ce40ee0861a0fd1da563d61d5a92863706.png)  \n「　こういう　入れ子の分数の　計算の仕方　分かんないのよね。　どうやって　やんの？」  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　割る　というのは　逆数を掛けるんだぜ」  
+![20220107math34a1.png](https://crieit.now.sh/upload_images/b4c27a0fc64409458b8fb90ec9eed96661d85746c35a9.png)  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　?　えっ、　じゃあ　こう？」  
+![20220107math34a2.png](https://crieit.now.sh/upload_images/315ac0af82b36644b06e09654ff7d4e861d857a267711.png)  
+![ohkina-hiyoko-futsu2.png](https://crieit.now.sh/upload_images/96fb09724c3ce40ee0861a0fd1da563d61d5a92863706.png)  \n「　?　４分の３　じゃないのよ」  
+![20220107math35.png](https://crieit.now.sh/upload_images/ca0e8c41ed83d90118fbda542acc2bc961d858087eda5.png)  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　?　短い方の赤い線の長さは　`0.75`　？」  
+![20220107math36.png](https://crieit.now.sh/upload_images/d43bd5513829f7276ce78c76469f5d7161d858a74efff.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　こんな式で　合ってんの？」  
+![20220107math36a2.png](https://crieit.now.sh/upload_images/4ee4994bb3ed2ef273d2abd035c9cfca61d8597460f84.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　別に　こんな数出てきても　何も面白くないな」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　寝れるな」  
+# 逆数（コタンジェントとタンジェント）
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　コタンジェントは　タンジェントの逆数だそうだぜ」  
+![20220108math37.png](https://crieit.now.sh/upload_images/544044fa3167a57bccb460888a6e5ba761d8eb1dd057d.png)  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　?　なんか　レイディアスを共有している直角三角形の連中は　あやしいな」  
+![20220108math38.png](https://crieit.now.sh/upload_images/c0a8f6d1014ad8249ea805171f58113d61d8ebec625d0.png)  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　?　円なんか見てるから　ワケ分からんだけで　直角三角形の相似　だけを見ていればいいのでは？」  
+# 直角三角形を、２つの直角三角形に分割したら、その２つの直角三角形は相似
+![20220108math39.png](https://crieit.now.sh/upload_images/f06d18b8d44b8a1bd82c6ec118f7d9af61d95184cf674.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　どんな直角三角形も、その中に２つの直角三角形を作るように二分すれば、その２つの直角三角形は\n相似なのかだぜ？」    
+![ohkina-hiyoko-futsu2.png](https://crieit.now.sh/upload_images/96fb09724c3ce40ee0861a0fd1da563d61d5a92863706.png)  \n「　考えれば　分かるんじゃないの？」  
+![20220108math39a1.png](https://crieit.now.sh/upload_images/ba6bd85400be58a62a164854601c27d061d953b10a7b5.png)  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　?　三角形の内角の合計は　180　と決まってるのだし」  
+![20220108math39a2.png](https://crieit.now.sh/upload_images/e26f99e5a09bbe0dfe9f8b5260c61b3e61d9544823bc1.png)  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　?　さらに　三角形は直角を１つまでしか持てないし」  
+![20220108math39a3.png](https://crieit.now.sh/upload_images/39093d4311d4268ea4af4af1feac816361d954bbdb1da.png)  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　?　正三角形の中に　２つの小さな正三角形を分割するとき、小さな三角形の１つの角は、分割する前の三角形の角をそのまま使ってるから」  
+![20220108math39a4.png](https://crieit.now.sh/upload_images/2bbcaa9243fcff28b6bdde2ea09dc28161d9554bdc24a.png)  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　?　直角と、分割する前のそのままの角と、内角の合計の３つまで　もう決まってるのだから」  
+![20220108math39a5.png](https://crieit.now.sh/upload_images/0fd6f332754144a47f2382d1f4a210d861d9558c88182.png)  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　?　もとの三角形の直角のところを２つに割ったが、その角がいくつになるかは、  \n割る前の三角形の角のうち、使ってないところと同じになることは　もう決まってるぜ」  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　考えたら分かったな。考えてなかったお父ん、バカみたいだな」  
+![ohkina-hiyoko-futsu2.png](https://crieit.now.sh/upload_images/96fb09724c3ce40ee0861a0fd1da563d61d5a92863706.png)  \n「　ｎが３以上の　正ｎ角形　の中で、直角を２つ持てないのは　正３角形だけだから、  \n他の　正ｎ角形　をいくら見慣れていても、直角を２つ持てないことを　うっかり忘れてしまうのよね」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　平行する２本の線を持てない　ｎ角形　とも言えるよな」  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　何むずかしい話ししてんの　お前ら」  
+![20220108math40.png](https://crieit.now.sh/upload_images/78d870a3b8c3e041431d2cc7818d22d361d95869a4a61.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　直角三角形　いくら直角に割っても　もとの直角三角形の　相似　ばかりなの？」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　そう説明しただろ。永遠にそうだぜ」  
+![20220108math41.png](https://crieit.now.sh/upload_images/1c4e92ab0428d1aeb0da0d01df2b76b161d95ebbc8d24.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　いろんな分割の仕方がありそうだな！」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　やめてくれだぜ、頭がバカになる」  
+# タンジェントとコサインの練習
+![20220108math42a1.png](https://crieit.now.sh/upload_images/b8726cf45e1b0f85a4dedb8044778bc661d963393bf0e.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　あれっ？　上図の　黄色の部分は　正方形かだぜ？」  
+![ohkina-hiyoko-futsu2.png](https://crieit.now.sh/upload_images/96fb09724c3ce40ee0861a0fd1da563d61d5a92863706.png)  \n「　計算すりゃ　いいんじゃないの？」  
+![20220108math43.png](https://crieit.now.sh/upload_images/8eeeacd562b1f0e1b5a7f95fd48bdfcf61d96381f2437.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　正三角形だと仮定しよう。　あれっ？　上図の　赤色の線の長さは　いくつだぜ？」  
+![ohkina-hiyoko-futsu2.png](https://crieit.now.sh/upload_images/96fb09724c3ce40ee0861a0fd1da563d61d5a92863706.png)  \n「　考えりゃ　いいんじゃないの？」  
+![20220108math43a1b2.png](https://crieit.now.sh/upload_images/a2156850df09b1e211e52282891c41b861d97720bc091.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　どこが相似だっていう前提知識があって、　正三角形の　３つの線の長さの　比　さえ知ってれば　計算できるよな」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　覚えたか」  
+![20220108math43a2.png](https://crieit.now.sh/upload_images/b6652171814e194d5855d074b96bbbc061d96797e9b67.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　こんなの全部やらないといけないのか、大変だな……」  
+![20220108math44.png](https://crieit.now.sh/upload_images/87a4ccbb53dc97df1f40e629d04d06a561d96a2a0680d.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　まあ　やるしかないしな」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　`2 - 3/2` は `0.5` だぜ」  
+![20220108math45.png](https://crieit.now.sh/upload_images/bd49dc9a969a08c859a1812a7323f67961d96d108ac8d.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　じゃあ　斜辺の線分の長さ、　1.5 と 0.5 の比なのかだぜ？」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　コタンジェントは　タンジェントの逆数だしな」  
+![20220108math46.png](https://crieit.now.sh/upload_images/7de64db09ec38d62cf2c107fb54909d661d96ee485c19.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　上図の　正三角形のときの比は、いつでも　こうなのかだぜ？」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　見ようによっては　cos 30°　（コサイン 30°）だしな」  
+![20220108math47.png](https://crieit.now.sh/upload_images/4e018b73b7b6824de3d6a393356d152b61d97007af492.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　そんなけ分かってれば　ここまで　すぐに出せるぜ」  
+![20220108math48.png](https://crieit.now.sh/upload_images/156e5fe1e49f0fff60c031387b4f6a6b61d971b47ba90.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　１個１個やる」  
+![20220108math49.png](https://crieit.now.sh/upload_images/db3a86cf6f82b2445fe0c2c172feeb0e61d9733c8f9d6.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　ほんと疲れる」  
+![20220108math49.png](https://crieit.now.sh/upload_images/db3a86cf6f82b2445fe0c2c172feeb0e61d974a8e98b5.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　ここまで出た」  
+![20220108math50.png](https://crieit.now.sh/upload_images/5fb83897f600582dd793d3c6faad5e6161d9780231184.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　違った」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　お父んの絵がヘタクソだから」  
+# ピタゴラスの定理
+![20220108math51.png](https://crieit.now.sh/upload_images/bdc4550a9432d5f2689282ce0b522ff261d97dc60d077.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　ピタゴラスの定理は、長方形を考えるところから　始まるんだぜ」  
+![20220108math51a2.png](https://crieit.now.sh/upload_images/b1fd54ad62c53319b64f0a45a0df92ab61d97e38e6fd7.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　上図の　桃色の面積と、　黄色の面積は　同じだよな」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　同じというが何か知らんが　面積は等しいぜ」  
+![20220108math51a3.png](https://crieit.now.sh/upload_images/2d99524b3d143fa9a3e5c6c0d7b571b961d97ee408e23.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　上図の　桃色の面積と、　黄色と緑を足し合わせた面積は　等しいよな」  
+![ohkina-hiyoko-futsu2.png](https://crieit.now.sh/upload_images/96fb09724c3ce40ee0861a0fd1da563d61d5a92863706.png)  \n「　線を引こうが　引かなこうが　面積は変わってませんからね」  
+![20220108math51a4.png](https://crieit.now.sh/upload_images/ee7ce1ad6efe39e8a2ab7cd4c8f6664161d980fc54491.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　ピタゴラスの定理のよくある使い道は、　上図の　黄色の線の長さと、緑色の線の長さが分かれば、\n桃色の線の長さになるということだぜ」  
+![20220108math51a5b2.png](https://crieit.now.sh/upload_images/c60cf2338f77b0c3c791a55cc69990c961d986bdd479c.png)　
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　で、この線は　見ようによっては　どれも　直角三角形の斜辺だぜ」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　ぜんぜん　直角に描けてないじゃないか」  
+![20220108math51a5b3.png](https://crieit.now.sh/upload_images/2b17e5a1d1529faf8c85f70b3bd45a1561d99bbac71d1.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　で、　桃色の線の長さは、　黄色と緑の線の長さを足したものとは、違うよな」  
+![ohkina-hiyoko-futsu2.png](https://crieit.now.sh/upload_images/96fb09724c3ce40ee0861a0fd1da563d61d5a92863706.png)  \n「　三角不等式ですからね」  
+![20220108math52.png](https://crieit.now.sh/upload_images/bea416c096e2402e08180eeda507cda961d9888571918.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　でも何か　辺の長さで正方形を作ると　桃色の正方形の面積は、黄色と緑の面積を足したものと等しいんだぜ」  
+![20220108math57.png](https://crieit.now.sh/upload_images/50512127c74c6b8b76ecf83775ca078961d999cc50837.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　この図の証明、山ほど　されてる」  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　線の長さを足そうとすると　三角不等式に阻まれるのに、なんで　面積は足すのがうまくいくんだぜ？」  
+![ohkina-hiyoko-futsu2.png](https://crieit.now.sh/upload_images/96fb09724c3ce40ee0861a0fd1da563d61d5a92863706.png)  \n「　証明山ほどあるから　うまくいくから　うまくいくんじゃないの？」  
+![20220108math58.png](https://crieit.now.sh/upload_images/c2b299d0c8baf8a5a52c9e5fd9c2599a61d99d09b9423.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　２つの正方形の大きさに　極端に差を付けても　ピタゴラスの定理　に変わりはないぜ」  
+![20220108math59.png](https://crieit.now.sh/upload_images/a8e2e3685ee742d8bcd4166eaedf8d3c61d9a0a14d555.png)  
+![ramen-tabero-futsu2.png](https://crieit.now.sh/upload_images/d27ea8dcfad541918d9094b9aed83e7d61d5a902ee09d.png)  \n「　?　桃色の正方形の大きさを固定して、コロンと横に寝かしてみろだぜ。  \nこのとき、黄色の正方形と、緑色の正方形が　どうなってんのか想像するのも　理解の確認になる」  
+![20220108math60.png](https://crieit.now.sh/upload_images/61ac15c26e701e54a8e870fa6baa5adc61d9a3ea29e4b.png)  
+![kifuwarabe-futsu.png](https://crieit.now.sh/upload_images/beaf94b260ae2602ca8cf7f5bbc769c261d5a91791a12.png)  \n「　?　転がる向きは　こうやるのが　よくあるかな」  
+＜書きかけ＞', NULL, 'limited', 0, 0, NULL, 1, 495, '216.244.66.195', 0, '2022-01-05 14:19:07', '2022-01-08 14:49:26'),

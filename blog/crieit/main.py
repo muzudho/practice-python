@@ -1,8 +1,23 @@
+if __name__ == "__main__":
+
+    # 読込用にファイルをオープンする
+    with open('input.txt', 'r', encoding='utf-8') as f:
+
+        # すべての内容を読み込む
+        contents = f.read()
+
+        # \n\n を改行に変換する
+        contents = contents.replace(r'\n\n', '\n')
+
+        # コンソール表示
+        print(contents)
 
 
-# TODO ファイルを読み込む
+    # 書出し用にファイルをオープンする
+    with open('output.txt', 'w', encoding='utf-8') as f:
 
-# TODO \n\n を改行に変換する
+        print("writing ...")
 
-# TODO ファイルを上書きする
+        # 内容を書き込む
+        f.write(contents)
 
