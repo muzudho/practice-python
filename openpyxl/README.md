@@ -13,3 +13,4 @@ cd openpyxl
 # 参考
 
 * 📖 [Excel作成/編集を自動化！python openpyxlのまとめ](https://qiita.com/mathlive/items/20078f4b31273c180f51)
+* 📖 [列番号をアルファベットにする関数もOpenPyXLにはある－get_column_letter()関数](https://www.relief.jp/docs/openpyxl-get-column-letter-function.html)
