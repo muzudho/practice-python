@@ -37,7 +37,7 @@ Excel ファイルを作ろう！
                 wb.save(file_name)
 
                 print(f"""\
-{file_name} を保存しました。
+{file_name} を保存しました
 """)
 
                 sheet_name = input(f"""\
@@ -54,7 +54,7 @@ Excel ファイルを作ろう！
 
                 print(f"""\
 シートの名前を {ws.title} に変更しました。
-{file_name} を保存しました。
+{file_name} を保存しました
 """)
 
                 column_name = input(f"""\
@@ -67,7 +67,7 @@ Excel ファイルを作ろう！
 
                 print(f"""\
 {ws.title} シートの左上のセルに {column_name} と入れました。
-{file_name} を保存しました。
+{file_name} を保存しました
 """)
 
 
@@ -90,8 +90,22 @@ Excel ファイルを作ろう！
 
                 print(f"""\
 {ws.title} シートの１行目について、２列目から列名を入れました。
-{file_name} を保存しました。
+{file_name} を保存しました
 """)
+
+                sheet_name = input(f"""\
+２つ目のシートを新規作成するサンプルを示します。
+例： Good morning
+シート名を入力してください> """)
+
+                ws = wb.create_sheet(title=sheet_name)
+                wb.save(file_name)
+
+                print(f"""\
+{ws.title} シートを作成しました。
+{file_name} を保存しました
+""")
+
 
         except Exception as err:
             print(f"""\
