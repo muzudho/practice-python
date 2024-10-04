@@ -57,6 +57,18 @@ Excel ファイルを作ろう！
 {file_name} を保存しました。
 """)
 
+                column_name = input(f"""\
+{ws.title} シートの左上のセルに列名を入れてみましょう。
+例: Name
+列名を入力してください> """)
+
+                ws['A1'] = column_name
+                wb.save(file_name)
+
+                print(f"""\
+{ws.title} シートの左上のセルに {column_name} と入れました。
+{file_name} を保存しました。
+""")
 
         except Exception as err:
             print(f"""\
