@@ -70,6 +70,29 @@ Excel ファイルを作ろう！
 {file_name} を保存しました。
 """)
 
+
+                dust = input(f"""\
+{ws.title} シートの１行目について、２列目から Age, Address, Phone, Web site と入れるサンプルを示します。
+何か入力してエンターキーを押してください> """)
+
+                column_names = [
+                        'Age',
+                        'Address',
+                        'Phone',
+                        'Web site',
+                ]
+
+                for index, column_name in enumerate(column_names, 2):   # 2 列目から
+                        cell_address = f'{xl.utils.get_column_letter(index)}1'
+                        ws[cell_address] = column_name
+
+                wb.save(file_name)
+
+                print(f"""\
+{ws.title} シートの１行目について、２列目から列名を入れました。
+{file_name} を保存しました。
+""")
+
         except Exception as err:
             print(f"""\
 おお、残念！　例外が投げられてしまった！  
