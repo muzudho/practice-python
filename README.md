@@ -2,6 +2,13 @@
 
 Python3の練習☆（＾～＾）
 
+学習レベルに応じて、以下のリポジトリーにも分けてあります。（このリポジトリーはレッスンではありません）  
+
+* 📖 [Lv.1 こんにちわ！パイソン](https://github.com/muzudho/hello-python)
+* 📖 [Lv.2 どうだい？パイソン](https://github.com/muzudho/howdy_python)
+* 📖 [Lv.3 どうした？パイソン](https://github.com/muzudho/whatsup_python)
+
+
 # git 操作
 
 ```shell
