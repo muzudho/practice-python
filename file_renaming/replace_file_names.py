@@ -132,7 +132,7 @@ Do you want to run it (y/n)?""")
 
     except Exception as err:
         print(f"""\
-おお、残念！　例外が投げられてしまった！  
+おお、残念！　例外が投げられてしまった！
 {type(err)=}  {err=}
 
 以下はスタックトレース表示じゃ。
