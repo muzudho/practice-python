@@ -6,6 +6,7 @@
 #
 import traceback
 import openpyxl as xl
+import os
 
 
 ########################################
@@ -17,16 +18,45 @@ if __name__ == '__main__':
                 # ワークブックの作成
                 wb = xl.Workbook()
 
-                file_name = input(f"""\
+                while True:
+                        file_name = input(f"""\
 Excel ファイルを作ろう！
 例： hello.xlsx
 ファイル名を入力してください> """)
+
+                        if os.path.isfile(file_name):
+                                command = input(f"""\
+{file_name} という名前のファイルは既にあります。
+上書きしますか(Y/n)? """)
+
+                                if command == 'n':
+                                        continue
+
+                        break
 
                 wb.save(file_name)
 
                 print(f"""\
 {file_name} を保存しました。
 """)
+
+                sheet_name = input(f"""\
+最初に作るシートの名前を決めよう！
+例： Hello world
+シート名を入力してください> """)
+
+                # 最初に Sheet という名前のシートができているので、それを参照します
+                ws = wb["Sheet"]
+
+                # シートの名前を変更します
+                ws.title = sheet_name
+                wb.save(file_name)
+
+                print(f"""\
+シートの名前を {ws.title} に変更しました。
+{file_name} を保存しました。
+""")
+
 
         except Exception as err:
             print(f"""\
